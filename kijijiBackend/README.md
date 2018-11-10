@@ -85,8 +85,6 @@ updated cronStatus
 yarn test
 ```
 
-### Break down into end to end tests
-
 Only existence of db branches are tested to prevent `refresh.js` from crashing. Extensive testing of actual calculation functions need to be done.
 
 ## Built With
