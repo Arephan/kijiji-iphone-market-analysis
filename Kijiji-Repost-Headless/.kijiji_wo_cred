@@ -1,0 +1,37 @@
+# KIJIJI
+alias gis="googleimagesdownload -s medium -l 10 -a wide -m -e -o ~/Documents/Dev/Kijiji-Repost-Headless/items -k "
+alias ivenv="source venv/bin/activate"
+alias kijiji="cd LOCATION_OF_Kijiji-Repost-Headless && ivenv && python3 kijiji_repost_headless -u KIJIJI_EMAIL -p KIJIJI_PASSWORD "$1""
+
+function repostkijiji {
+    kijiji show;
+    for item in $(find ./items -name "*.yml" -print)
+    do kijiji repost "$item"
+    done;
+}
+
+function buildkijiji {
+    if [ -z "$1" ]                           # Is parameter #1 zero length?
+    then
+        echo "Enter Item Name"  # Or no parameter passed.
+        return 0
+    else
+        cd ~/Documents/Dev/Kijiji-Repost-Headless
+        mkdir -p ./items/"$1";
+        echo "Created Item Directory \"$1\""
+        
+        counter=1
+        for pic in $(find ~/Downloads/Photos -name "*.jpg" -print); do
+            mv "$pic" "items/$1/$counter.jpg"
+            let counter=counter+1
+        done
+
+        rmdir ~/Downloads/Photos
+        echo "Moved pics from Downloads to item dir" 
+
+        cp ./item.yml ./items/"$1"/item.yml
+        vim -O ./items/"$1"/item.yml ./kijiji_repost_headless/kijiji_categories_attrs.json
+        read -p "Press enter when done editing"
+        kijiji post ./items/"$1"/item.yml
+    fi
+}

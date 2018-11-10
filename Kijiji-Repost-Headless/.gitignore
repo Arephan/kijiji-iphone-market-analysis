@@ -1,0 +1,17 @@
+__pycache__/
+/.idea/
+*.yml
+no_replies*
+items/*
+old_items/*
+replied.csv
+replied/*
+credentials.json
+data.csv
+house inventory (Responses).csv
+kijiji_ads.json
+kijiji_repost_headless/client_secret.json
+kijiji_repost_headless/venv/
+kijijiapi_dump*
+venv/
+.kijiji

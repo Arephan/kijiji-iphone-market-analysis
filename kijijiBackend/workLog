@@ -1,0 +1,39 @@
+OCT 2
+    11:04 - Learning Unit Test
+    11:49 - Learned Jest (unit test lib)
+        I will implement 1 test and take a break
+    11:57 - taking 20 min break
+    12:41 - resume making tests
+OCT 3
+    1:12AM - Got distracted, but learned how to make tests
+        hungry, taking another break
+    2:23AM - Start building tests and re-organizing code
+    3:00AM - Learning about async await map filter, taking 5min break
+    3:28AM - Getting tired, still going on
+    4:03AM - Too tired to continue, test driven dev from now on.
+        TODAY:
+            Learned how to export modules
+            learnedhow to write tests with Jest
+        TOMORROW:
+            finish code organization of:
+                localStat, globalStat, checkOnline, writeToFirebase
+    10:59AM - Start a new Day!
+    12:33PM - Debugging localStat and globalStat
+        Place away from mean calculations else where
+            Decided against this to prevent complications
+    3:09PM - Almost done backend. Just got to save top 100 to firebase.
+    9:05PM - Starting Again. 
+    10:54PM - Almost done reorganizing code. Finishing up putting refresh.js into functions
+OCT 4
+    12:09AM - Super Flow. Almost done!! Figuring out promises
+    12:56AM - Commit Complete. Backend is now organized
+        TODAY:
+            Code organization
+            Learned about promises, Promise.all, await, async
+        TOMORROW:
+            Setup frankunderwood with new backend
+                Make sure to db.json keys are compatible to not lose previous data
+            Implement frontend to display valueIphonesOnline
+
+VISION: The WebApp tells which iphone to buy next.
+            Buy and Sell. Profit.
